@@ -11,7 +11,7 @@ Google Chrome add-on for implementing PGP in Facebook Messenger
 8. Choose the downloaded folder
 9. You are good to go and can go on Facebook to use it.
 
-## Built With
+## Dependencies
 * [OpenPGP.js](https://github.com/openpgpjs/openpgpjs) - OpenPGP.js is a Javascript implementation of the OpenPGP protocol
 * [jQuery](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library
 
