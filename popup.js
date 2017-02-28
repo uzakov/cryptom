@@ -1,7 +1,5 @@
-$('#btn_submit').click(function(e){
-    e.preventDefault();
-    $('#result').text("test");
-    console.log("test");
+$(document).ready(function() {
+$('#btn_submit').click(function(){
     var input = $('#input').val();
     var options, encrypted;
     var pubkey ="-----BEGIN PGP PUBLIC KEY BLOCK-----\n"+
@@ -66,7 +64,9 @@ $('#btn_submit').click(function(e){
 
     openpgp.encrypt(options).then(function(ciphertext) {
         encrypted = ciphertext.data; // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
-        console.log(encrypted);
+         $('#result').text(encrypted);
+
     });
-    $('#result').text(encrypted);
+
+    });
 });
