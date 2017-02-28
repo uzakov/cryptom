@@ -1,9 +1,8 @@
 $("tr._51mx").bind("DOMSubtreeModified", function() {
-     var $span= $('span._5yl5');
+	var $span= $('span._5yl5');
     $span.each(function(){
 		if ($(this).text().includes('-----BEGIN PGP MESSAGE-----')) {
 			var options, encrypted;
-		
 			var pubkey = '-----BEGIN PGP PUBLIC KEY BLOCK-----\n'+
 			'Version: OpenPGP.js v.1.20130420' +
 			'Comment: http://openpgpjs.org\n'+
@@ -30,7 +29,7 @@ $("tr._51mx").bind("DOMSubtreeModified", function() {
 			'0N7SSC/I0KpeohCPpQmCdKzwNfveWEY=\n'+
 			'=cN/+\n'+
 			'-----END PGP PRIVATE KEY BLOCK-----';
-                        var text = $(this).text();
+			var text = $(this).text();
 			text = text.replace(/Version:/, '\n$&');
 			text = text.replace(/Comment:/, '\n$&');
 			text = text.replace(/openpgpjs\.org/, '$&\n\n');
