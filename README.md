@@ -18,6 +18,7 @@ Google Chrome add-on for implementing PGP in Facebook Messenger
 ## Authors 
 * **Jacques Ryan**
 * **Alikhan Uzakov**
+
 Created initially at WarwickHack 2017
 ## How do I get involved?
 You want to help, great! Go ahead and fork our repo, make your changes and send us a pull request.
