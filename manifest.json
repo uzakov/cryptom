@@ -17,9 +17,9 @@
 
   "content_scripts": [
     {
-	"matches": ["https://facebook.com/*", "https://*.facebook.com/*"],
-	"js": ["jquery-3.1.1.min.js", "openpgp.js", "logic.js"],
-        "run_at":"document_end"
+	  "matches": ["https://facebook.com/*", "https://*.facebook.com/*"],
+	  "js": ["jquery-3.1.1.min.js", "openpgp.js", "logic.js"]
+      //"run_at":"document_end"
 	}
   ] 
 }
