@@ -8,8 +8,8 @@
     <script>
         var options = {
             userIds: [{ name:'Jack Man', email:'jack@example.com' }], // multiple user IDs
-            numBits: 512,                                           // RSA key size
-            passphrase: 'Secretpass'         // protects the private key
+            numBits: 512//,                                           // RSA key size
+            //passphrase: 'Secretpass'         // protects the private key
         };
 
         openpgp.generateKey(options).then(function(key) {
