@@ -2,6 +2,7 @@ $("tr._51mx").bind("DOMSubtreeModified", function() {
     var $span= $('span._5yl5');
     $span.each(function(){
         if ($(this).text().includes('-----BEGIN PGP MESSAGE-----')) {
+            alert($(this).text());
             var options, encrypted;
 
             var pubkey =

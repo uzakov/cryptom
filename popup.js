@@ -1,4 +1,5 @@
 $(document).ready(function() {
+// Listener for button event
     $('#btn_submit').click(function(){
         var input = $('#input').val();
         var options, encrypted;
@@ -17,12 +18,12 @@ $(document).ready(function() {
                 "JeoCB2AqnmtEM6EB9AeKy/Jvmj9EVxch/aezsWJKp5Z5vw50QMxMj3XN2w==",
                 "=rx/B",
                 "-----END PGP PUBLIC KEY BLOCK-----"].join("\n");
-
+// Options for encryption 
         options = {
             data: input,    // input as String (or Uint8Array)
             publicKeys: openpgp.key.readArmored(pubkey).keys  // for encryption
         };
-
+// Actual encryption and displaying it to user
         openpgp.encrypt(options).then(function(ciphertext) {
             encrypted = ciphertext.data; // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
             $('#result').text(encrypted);
