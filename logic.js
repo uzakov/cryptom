@@ -2,6 +2,7 @@ $("tr._51mx").bind("DOMSubtreeModified", function() {
     var $span= $('span._5yl5');
     $span.each(function(){
         if ($(this).text().includes('-----BEGIN PGP MESSAGE-----')) {
+            alert($(this).text());
             var options, encrypted;
             var pubkey = [
                 "-----BEGIN PGP PUBLIC KEY BLOCK-----",
@@ -43,8 +44,8 @@ $("tr._51mx").bind("DOMSubtreeModified", function() {
                 "-----END PGP PRIVATE KEY BLOCK-----"].join("\n");
             var text = $(this).text();
             text = text.replace(/Version:/, '\n$&');
-            text = text.replace(/Comment:/, '\n$&');
-            text = text.replace(/openpgpjs\.org/, '$&\n\n');
+            //text = text.replace(/Comment:/, '\n$&');
+            //text = text.replace(/openpgpjs\.org/, '$&\n\n');
             text = text.replace(/[^=]=/, '$&\n');
             text = text.replace(/-----END/, '\n$&');
             options = {
