@@ -1,9 +1,8 @@
 $(document).ready(function() {
-// Listener for button event
+    // Listener for button event
     $('#btn_submit').click(function(){
         var input = $('#input').val();
         var options, encrypted;
-<<<<<<< HEAD
         var pubkey = [
             "-----BEGIN PGP PUBLIC KEY BLOCK-----",
             "Version: OpenPGP.js v2.3.7",
@@ -20,7 +19,6 @@ $(document).ready(function() {
             "=74/2",
             "-----END PGP PUBLIC KEY BLOCK-----"].join("\n");
 
-=======
         var pubkey =
             ["-----BEGIN PGP PUBLIC KEY BLOCK-----",
                 "Version: OpenPGP.js v2.3.7",
@@ -36,13 +34,12 @@ $(document).ready(function() {
                 "JeoCB2AqnmtEM6EB9AeKy/Jvmj9EVxch/aezsWJKp5Z5vw50QMxMj3XN2w==",
                 "=rx/B",
                 "-----END PGP PUBLIC KEY BLOCK-----"].join("\n");
-// Options for encryption 
->>>>>>> d6e728dea050abdd417eb97e443e71c848463414
+        // Options for encryption
         options = {
             data: input,    // input as String (or Uint8Array)
             publicKeys: openpgp.key.readArmored(pubkey).keys  // for encryption
         };
-// Actual encryption and displaying it to user
+        // Actual encryption and displaying it to user
         openpgp.encrypt(options).then(function(ciphertext) {
             encrypted = ciphertext.data; // '-----BEGIN PGP MESSAGE ... END PGP MESSAGE-----'
             $('#result').text(encrypted);

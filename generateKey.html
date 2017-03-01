@@ -4,20 +4,20 @@
         <title>OpenPGPJS keygen</title>
         <script src="openpgp.js"></script>
     </head>
-<body>
-    <script>
-        var options = {
-            userIds: [{ name:'Jack Man', email:'jack@example.com' }], // multiple user IDs
-            numBits: 512//,                                           // RSA key size
-            //passphrase: 'Secretpass'         // protects the private key
-        };
+    <body>
+        <script>
+            var options = {
+                userIds: [{ name:'Jack Man', email:'jack@example.com' }], // multiple user IDs
+                numBits: 512//,                                           // RSA key size
+                //passphrase: 'Secretpass'         // protects the private key
+            };
 
-        openpgp.generateKey(options).then(function(key) {
-            var privkey = key.privateKeyArmored; // '-----BEGIN PGP PRIVATE KEY BLOCK ... '
-            var pubkey = key.publicKeyArmored;   // '-----BEGIN PGP PUBLIC KEY BLOCK ... '
-            console.log("My private key:\n\n" + privkey + "\n\n");
-            console.log("My public key:\n\n" + pubkey + "\n\n");
-        });
-    </script>
-</body>
+            openpgp.generateKey(options).then(function(key) {
+                var privkey = key.privateKeyArmored; // '-----BEGIN PGP PRIVATE KEY BLOCK ... '
+                var pubkey = key.publicKeyArmored;   // '-----BEGIN PGP PUBLIC KEY BLOCK ... '
+                console.log("My private key:\n\n" + privkey + "\n\n");
+                console.log("My public key:\n\n" + pubkey + "\n\n");
+            });
+        </script>
+    </body>
 </html>
